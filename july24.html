@@ -22,6 +22,26 @@
       .column-separator {
         display: none !important;
       }
+      .logo {
+        width: 150px !important;
+        height: auto !important;
+      }
+      .logo-amigos {
+        height: 100px !important;
+        width: auto !important;
+        margin: 0 10px !important;
+      }
+      .logos-amigos-container {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .youtube-video {
+        width: 100% !important;
+        height: 200px !important;
+      }
     }
     
     /* Layout */
@@ -67,6 +87,21 @@
     
     .logo {
       width: 200px;
+      height: auto;
+    }
+    
+    .logo-amigos {
+      height: 150px;
+      width: auto;
+      margin: 0 30px;
+    }
+    
+    .logos-amigos-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
     
     /* Title section */
@@ -115,6 +150,7 @@
     
     .content-text {
       margin: 0 0 15px 0;
+      text-align: justify;
     }
     
     .cta-button {
@@ -166,6 +202,13 @@
       margin-bottom: 15px;
     }
     
+    .youtube-video {
+      width: 350px;
+      height: 197px;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+    
     .image-gallery {
       text-align: center;
       margin: 15px 0;
@@ -183,6 +226,12 @@
     .gallery-image:last-child {
       margin-left: 2%;
     }
+    
+    .gallery-image-three {
+      width: 30%;
+      border-radius: 6px;
+      margin: 0 1.5%;
+    }
   </style>
 </head>
 <body>
@@ -193,7 +242,29 @@
           <!-- Cabecera -->
           <tr>
             <td class="header-cell">
-              <img src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png" alt="Museu d'Informàtica" class="logo">
+              <table style="width: 100%; border-collapse: collapse;">
+                <!-- Primera fila: Logos de Amigos del Museo -->
+                <tr>
+                  <td colspan="3" style="text-align: center; vertical-align: middle; padding-bottom: 20px;">
+                    <div class="logos-amigos-container">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amigos.png" alt="Amigos del Museo" class="logo-amigos">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amics.png" alt="Amics del Museu" class="logo-amigos">
+                    </div>
+                  </td>
+                </tr>
+                <!-- Segunda fila: Logos institucionales -->
+                <tr>
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/03/marca_UPV_principal_negro300.png" alt="Universitat Politècnica de València" class="logo">
+                  </td>
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png" alt="Museu d'Informàtica" class="logo">
+                  </td>
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/04/STINF_PRINCIPAL_V2-e1617005733397-300x295-1-e1619541346572.png" alt="ETSInf" class="logo">
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 
@@ -201,8 +272,47 @@
           <tr>
             <td class="title-cell">
               <h1 class="main-title">📰 Newsletter Amigos del Museo / Amics del Museu</h1>
+              <p class="subtitle">Número 1 • Julio 2025 • Núm. 1 • Juliol 2025</p>
               <p class="subtitle">Todas las novedades, actividades y curiosidades del Museo de Informática de la UPV<br>
               Totes les novetats, activitats i curiositats del Museu d'Informàtica de la UPV</p>
+            </td>
+          </tr>
+
+          <!-- Editorial del Director -->
+          <tr>
+            <td class="content-cell">
+              <table class="content-table-inner" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="bilingual-column column-left">
+                    <h2 class="section-title">✉️ Carta del Director</h2>
+                    <p class="content-text">Queridos <strong>Amigos y Amigas del Museo</strong>,</p>
+                    <p class="content-text">Es para mí un gran placer daros la bienvenida a la <strong>primera edición del boletín del Museo de Informática</strong>. Con esta iniciativa queremos crear un canal de comunicación directo con vosotros, donde cada cuatro meses aproximadamente os contaremos las novedades más destacadas, curiosidades fascinantes y las actividades que desarrollamos en nuestro querido museo.</p>
+                    <p class="content-text">Como <strong>Amigos del Museo</strong>, sois parte fundamental de nuestra comunidad. Os recordamos que podéis pasar a vernos siempre que queráis: nuestras puertas están abiertas para vosotros. Vuestra pasión por la historia de la informática y vuestro apoyo constante nos motivan a seguir creciendo y mejorando cada día.</p>
+                    <p class="content-text">Queremos dar las gracias especialmente a todos los <strong>nuevos Amigos y Amigas</strong> que se han unido recientemente a nuestra comunidad. Vuestra incorporación nos llena de alegría y energía. Como muestra de nuestro agradecimiento, os recordamos que en el próximo <strong>Día del Amigo (fecha por determinar)</strong> se repartirán las recompensas especiales que tenemos preparadas para todos vosotros.</p>
+                    <p class="content-text">Espero que disfrutéis de esta primera entrega y que os sirva para conocer mejor todo lo que ocurre en vuestro museo.</p>
+                    <p class="content-text">Un abrazo,<br><strong>Javi Palanca</strong><br><em>Director del Museo de Informática de la UPV</em></p>
+                  </td>
+                  
+                  <td class="column-separator"></td>
+                  
+                  <td class="bilingual-column column-right">
+                    <h2 class="section-title">✉️ Carta del Director</h2>
+                    <p class="content-text">Estimats <strong>Amics i Amigues del Museu</strong>,</p>
+                    <p class="content-text">És per a mi un gran plaer donar-vos la benvinguda a la <strong>primera edició del butlletí del Museu d'Informàtica</strong>. Amb aquesta iniciativa volem crear un canal de comunicació directe amb vosaltres, on cada quatre mesos aproximadament us contarem les novetats més destacades, curiositats fascinants i les activitats que desenvolupem al nostre estimat museu.</p>
+                    <p class="content-text">Com a <strong>Amics del Museu</strong>, sou part fonamental de la nostra comunitat. Us recordem que podeu passar a veure'ns sempre que vulgueu: les nostres portes estan obertes per a vosaltres. La vostra passió per la història de la informàtica i el vostre suport constant ens motiven a continuar creixent i millorant cada dia.</p>
+                    <p class="content-text">Volem donar les gràcies especialment a tots els <strong>nous Amics i Amigues</strong> que s'han unit recentment a la nostra comunitat. La vostra incorporació ens omple d'alegria i energia. Com a mostra del nostre agraïment, us recordem que en el pròxim <strong>Dia de l'Amic (data per determinar)</strong> es repartiran les recompenses especials que tenim preparades per a tots vosaltres.</p>
+                    <p class="content-text">Espere que gaudiu d'aquesta primera entrega i que us servisca per conèixer millor tot el que ocorre al vostre museu.</p>
+                    <p class="content-text">Una abraçada,<br><strong>Javi Palanca</strong><br><em>Director del Museu d'Informàtica de la UPV</em></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Separador visual -->
+          <tr>
+            <td style="padding: 0 30px;">
+              <hr style="margin: 20px 0; border: 0; border-top: 2px solid #d6006e; width: 100%;">
             </td>
           </tr>
 
@@ -215,7 +325,7 @@
                   <td class="bilingual-column column-left">
                     <h2 class="section-title">🏛️ Inauguración del Mainframe Cii Honeywell Bull</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/honeywell-bull-inauguration.jpg" alt="Inauguración Cii Honeywell Bull" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/PXL_20240902_105409957.jpg" alt="Inauguración Cii Honeywell Bull" class="content-image">
                     
                     <p class="content-text">Con gran emoción celebramos la inauguración oficial de nuestro mainframe Cii Honeywell Bull, una joya de la computación industrial que marca un hito en nuestra colección. El evento contó con la presencia de representantes de <strong>ArcelorMittal</strong>, empresa donante de esta magnífica máquina, junto con los técnicos especializados que trabajaron incansablemente en su restauración.</p>
 
@@ -223,13 +333,11 @@
 
                     <hr class="section-separator">
 
-                    <h2 class="section-title">� El Taller del Museo en Vivo: Restauraciones Emblemáticas</h2>
+                    <h2 class="section-title">🔧 El Taller del Museo en Vivo: Restauraciones Emblemáticas</h2>
                     
-                    <video class="content-video" controls poster="https://museo.inf.upv.es/wp-content/uploads/2024/07/workshop-preview.jpg">
-                      <source src="https://museo.inf.upv.es/videos/talleres-restauracion.mp4" type="video/mp4">
-                      <source src="https://museo.inf.upv.es/videos/talleres-restauracion.webm" type="video/webm">
-                      Tu navegador no soporta el elemento de video.
-                    </video>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                      <iframe class="youtube-video" src="https://www.youtube.com/embed/3PCUZsA5nSM?si=k1mKcbjErma8o61E" title="Restauraciones en el Taller del Museo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
 
                     <p class="content-text">El taller de reparaciones del museo ha sido escenario de auténticas resurrecciones tecnológicas. Hemos logrado devolver la vida a <strong>dos ordenadores Amiga 2000</strong>, cuya restauración supuso un verdadero desafío técnico: eliminar la corrosión causada por las baterías tras décadas de abandono, que había dañado las patillas del procesador Motorola 68000.</p>
 
@@ -241,10 +349,8 @@
 
                     <h2 class="section-title">🎨 Colaboración Artística: "Artefactos"</h2>
 
-                    <div class="image-gallery">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/comptometer-monroe.jpg" alt="Comptómetro Monroe" class="gallery-image">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/katherine-johnson.jpg" alt="Katherine Johnson tribute" class="gallery-image">
-                    </div>
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/monroe.png" alt="Comptómetro Monroe" class="content-image">
+ 
 
                     <p class="content-text">El museo ha cedido un comptómetro Monroe para el fascinante proyecto artístico de <strong>Virginia Vinagre y Ella Ahonen</strong>. Estas artistas están creando composiciones fotográficas que rinden homenaje a las mujeres científicas retratadas en los murales del proyecto "Dones de Ciència" de la UPV.</p>
 
@@ -254,7 +360,7 @@
 
                     <h2 class="section-title">🎮 Retrópolis 2025: Un Éxito Rotundo</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/retropolis-2025.jpg" alt="Retrópolis 2025" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/05/PXL_20250412_082457994-scaled.jpg" alt="Retrópolis 2025" class="content-image">
 
                     <p class="content-text">¡Qué orgullosos estamos del éxito de <strong>Retrópolis 2025</strong>! La feria de retroinformática y videojuego clásico de la UPV ha batido todos los récords: <strong>1.900 asistentes</strong> y <strong>1.000 kg de alimentos</strong> donados al Banco de Alimentos de Valencia. Un evento que demuestra cómo la pasión por la tecnología vintage puede unirse a la solidaridad.</p>
 
@@ -262,28 +368,27 @@
 
                     <h2 class="section-title">📚 Éxito de "Programando otra Historia" en festInfor 2025</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/festinfor25.jpg" alt="FestInfor 2025" class="content-image">
+
                     <p class="content-text">Durante el <strong>festInfor 2025</strong> en la ETSINF tuvimos el placer de acoger la fascinante conferencia de <strong>Manuel Rubio</strong>: "¡No aprendas a programar!". Esta charla magistral ofreció una reflexión profunda sobre la evolución de los lenguajes de programación y el controvertido futuro del Chat-oriented Programming (CHOP).</p>
 
                     <p class="content-text">Manuel, con más de 30 años de experiencia y conocimiento de más de 20 lenguajes de programación, cautivó a la audiencia con un viaje cronológico por la historia de la programación.</p>
 
-                    <p class="content-text">La conferencia forma parte de su investigación para una serie de libros que recoge la historia de los lenguajes de programación por orden cronológico, un proyecto ambicioso que promete convertirse en referencia obligada para estudiantes y profesionales del sector.</p>
+                    <p class="content-text">La conferencia forma parte de su investigación para una serie de libros que recoge la historia de los lenguajes de programación por orden cronológico, un proyecto ambicioso que promete convertirse en referencia obligada para estudiantes y profesionales del sector. Puedes seguir su trabajo en su canal de YouTube <strong><a href="https://www.youtube.com/@programandootrahistoria" style="color: #d6006e;">Programando otra Historia</a></strong>.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">📅 Talleres de Robótica: Los Más Demandados</h2>
 
-                    <div class="image-gallery">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/robotics-workshop.jpg" alt="Taller de robótica" class="gallery-image">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/students-robots.jpg" alt="Estudiantes con robots" class="gallery-image">
-                    </div>
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2022/09/maqueen-microbit-rgb.jpg" alt="Taller de robótica" class="content-image">
 
-                    <p class="content-text">Los <strong>talleres de robótica</strong> se han consolidado como la actividad estrella del museo durante este período. Con una demanda que supera todas las expectativas, estos talleres combinan historia de la computación con tecnología de vanguardia, permitiendo a los participantes programar y construir sus propios robots mientras aprenden sobre la evolución de la inteligencia artificial.</p>
+                    <p class="content-text">Los <strong>talleres de robótica</strong> se han consolidado como la actividad estrella del museo durante este período. Con una demanda que supera todas las expectativas, estos talleres enseñan a los participantes a programar y manejar robots utilizando el lenguaje de programación visual Scratch para implementar un divertido juego de tipo Ping Pong, combinando aprendizaje y entretenimiento de manera innovadora.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">🎯 Oracle4Girls: Inspirando a las Tecnólogas del Futuro</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/oracle4girls.jpg" alt="Oracle4Girls evento" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Oracle4Girls-2949313138.jpg" alt="Oracle4Girls evento" class="content-image">
 
                     <p class="content-text">Nuestro museo tuvo el honor de colaborar en <strong>Oracle4Girls</strong>, un evento pionero que acercó la tecnología a niñas de entre 4 y 15 años. Durante esta jornada, nuestros voluntarios impartieron talleres especializados de robótica, criptografía y programación en Scratch, sembrando las semillas de futuras carreras STEM en las participantes.</p>
 
@@ -293,6 +398,8 @@
 
                     <h2 class="section-title">🏛️ Día Internacional de los Museos: Monkey Island en el Ágora</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/atarist.jpg" alt="Atari ST en el Día Internacional de los Museos" class="content-image">
+
                     <p class="content-text">El 16 de mayo celebramos el <strong>Día Internacional de los Museos</strong> con una participación especial en el Ágora de la UPV. Junto a otros museos universitarios, instalamos un stand interactivo donde la estrella indiscutible fue un <strong>Atari ST original</strong> ejecutando el mítico videojuego Monkey Island.</p>
 
                     <p class="content-text">Muchos visitantes pudieron experimentar la magia de los videojuegos clásicos, mientras nuestros expertos narraban la evolución de la industria del entretenimiento digital. Fue emocionante ver cómo diferentes generaciones se unían alrededor de esta obra maestra de LucasArts.</p>
@@ -300,6 +407,8 @@
                     <hr class="section-separator">
 
                     <h2 class="section-title">📈 Balance 2025: Más de 50 Actividades Realizadas</h2>
+
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/activitats.jpg" alt="Actividades del museo" class="content-image">
 
                     <p class="content-text">A pesar del parón inicial debido a la DANA, hemos recuperado completamente el ritmo y ya contabilizamos <strong>más de 50 actividades</strong> dirigidas a institutos y entidades colaboradoras. Estas incluyen visitas guiadas especializadas, talleres temáticos y conferencias magistrales.</p>
 
@@ -309,11 +418,15 @@
 
                     <h2 class="section-title">🚚 Nueva Donación: Computadora Siemens Nixdorf</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/nixdorf.jpg" alt="Computadora Siemens Nixdorf" class="content-image">
+
                     <p class="content-text">En 2025 hemos recibido multitud de donaciones, todas ellas muy apreciadas por nuestro equipo. Una de las últimas adquisiciones ha sido especialmente notable: una rara <strong>computadora Siemens Nixdorf de 135 kg</strong> que el equipo del museo trasladó desde Alzira. Esta imponente máquina representa un testimonio único de la informática empresarial alemana de los años 80 y 90.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">🔧 Restauración del VAX: Colaboración Institucional</h2>
+
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/vax-scaled.jpg" alt="Restauración del VAX" class="content-image">
 
                     <p class="content-text">Gracias a la colaboración del <strong>Área del Fondo de Arte y Patrimonio de la UPV</strong>, hemos logrado restaurar completamente una máquina mini-VAX. Esta joya de la computación de mediados de los 80 ha sido expuesta en la segunda planta del edificio DSIC (1F), donde los visitantes pueden apreciar su impresionante arquitectura y entender su importancia en la evolución de los sistemas informáticos.</p>
 
@@ -321,11 +434,19 @@
 
                     <h2 class="section-title">🗺️ Mejoras en la Señalización del Museo</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/senaletica-scaled.jpg" alt="Nueva señalización del museo" class="content-image">
+
                     <p class="content-text">Hemos completado la <strong>rotulación de las diferentes entradas</strong> de los 4 edificios del museo (1G, 1E, 1F y 1B) con mapas de situación y descripciones detalladas de las secciones de la exposición. Esta mejora permitirá a nuestros visitantes orientarse mejor y recorrer con mayor comodidad las diferentes áreas temáticas del museo.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">📚 Ampliación de Fondos Bibliográficos</h2>
+
+                    <div class="image-gallery">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/historia.jpg" alt="Historia de los lenguajes de programación" class="gallery-image-three">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/cincoduros.png" alt="Cinco Duros" class="gallery-image-three">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Microhobby-218.png" alt="MicroHobby" class="gallery-image-three">
+                    </div>
 
                     <p class="content-text">La biblioteca del museo se ha enriquecido con nuevas adquisiciones especializadas: <strong>dos volúmenes sobre Historia de los lenguajes de programación</strong> y <strong>dos ejemplares de "Cinco Duros"</strong>. Además, hemos solicitado la suscripción a la revista <strong>MicroHobby</strong>, que regresa este año tras décadas de pausa editorial.</p>
 
@@ -343,7 +464,7 @@
                   <td class="bilingual-column column-right">
                     <h2 class="section-title">🏛️ Inauguració del Mainframe Cii Honeywell Bull</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/honeywell-bull-inauguration.jpg" alt="Inauguració Cii Honeywell Bull" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/PXL_20240902_105409957.jpg" alt="Inauguració Cii Honeywell Bull" class="content-image">
                     
                     <p class="content-text">Amb gran emoció celebrem la inauguració oficial del nostre mainframe Cii Honeywell Bull, una joia de la computació industrial que marca una fita en la nostra col·lecció. L'esdeveniment va comptar amb la presència de representants d'<strong>ArcelorMittal</strong>, empresa donant d'aquesta magnífica màquina, junt amb els tècnics especialitzats que van treballar incansablement en la seua restauració.</p>
 
@@ -351,13 +472,11 @@
 
                     <hr class="section-separator">
 
-                    <h2 class="section-title">� El Taller del Museu en Viu: Restauracions Emblemàtiques</h2>
+                    <h2 class="section-title">🔧 El Taller del Museu en Viu: Restauracions Emblemàtiques</h2>
                     
-                    <video class="content-video" controls poster="https://museo.inf.upv.es/wp-content/uploads/2024/07/workshop-preview.jpg">
-                      <source src="https://museo.inf.upv.es/videos/talleres-restauracion.mp4" type="video/mp4">
-                      <source src="https://museo.inf.upv.es/videos/talleres-restauracion.webm" type="video/webm">
-                      El teu navegador no suporta l'element de vídeo.
-                    </video>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                      <iframe class="youtube-video" src="https://www.youtube.com/embed/3PCUZsA5nSM?si=k1mKcbjErma8o61E" title="Restauracions al Taller del Museu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
 
                     <p class="content-text">El taller de reparacions del museu ha sigut escenari d'autèntiques resurreccions tecnològiques. Hem aconseguit tornar la vida a <strong>dos ordinadors Amiga 2000</strong>, la restauració dels quals va suposar un veritable desafiament tècnic: eliminar la corrosió causada per les bateries després de dècades d'abandonament, que havia danyat les patilles del processador Motorola 68000.</p>
 
@@ -369,10 +488,7 @@
 
                     <h2 class="section-title">🎨 Col·laboració Artística: "Artefactos"</h2>
 
-                    <div class="image-gallery">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/comptometer-monroe.jpg" alt="Comptòmetre Monroe" class="gallery-image">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/katherine-johnson.jpg" alt="Homenatge Katherine Johnson" class="gallery-image">
-                    </div>
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/monroe.png" alt="Comptòmetre Monroe" class="content-image">
 
                     <p class="content-text">El museu ha cedit un comptòmetre Monroe per al fascinant projecte artístic de <strong>Virginia Vinagre i Ella Ahonen</strong>. Aquestes artistes estan creant composicions fotogràfiques que reten homenatge a les dones científiques retratades en els murals del projecte "Dones de Ciència" de la UPV.</p>
 
@@ -382,36 +498,35 @@
 
                     <h2 class="section-title">🎮 Retrópolis 2025: Un Èxit Rotund</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/retropolis-2025.jpg" alt="Retrópolis 2025" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/05/PXL_20250412_082457994-scaled.jpg" alt="Retrópolis 2025" class="content-image">
 
                     <p class="content-text">Que orgullosos estem de l'èxit de <strong>Retrópolis 2025</strong>! La fira de retroinformàtica i videojoc clàssic de la UPV ha batut tots els rècords: <strong>1.900 assistents</strong> i <strong>1.000 kg d'aliments</strong> donats al Banc d'Aliments de València. Un esdeveniment que demostra com la passió per la tecnologia vintage pot unir-se a la solidaritat.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">📚 Èxit de "Programant una altra Història" al festInfor 2025</h2>
+                    
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/festinfor25.jpg" alt="FestInfor 2025" class="content-image">
 
                     <p class="content-text">Durant el <strong>festInfor 2025</strong> a l'ETSINF vam tenir el plaer d'acollir la fascinant conferència de <strong>Manuel Rubio</strong>: "No aprenguis a programar!". Aquesta xerrada magistral va oferir una reflexió profunda sobre l'evolució dels llenguatges de programació i el controvertit futur del Chat-oriented Programming (CHOP).</p>
 
                     <p class="content-text">Manuel, amb més de 30 anys d'experiència i coneixement de més de 20 llenguatges de programació, va captivar l'audiència amb un viatge cronològic per la història de la programació.</p>
 
-                    <p class="content-text">La conferència forma part de la seua investigació per a una sèrie de llibres que recull la història dels llenguatges de programació per ordre cronològic, un projecte ambiciós que promet convertir-se en referència obligada per a estudiants i professionals del sector.</p>
+                    <p class="content-text">La conferència forma part de la seua investigació per a una sèrie de llibres que recull la història dels llenguatges de programació per ordre cronològic, un projecte ambiciós que promet convertir-se en referència obligada per a estudiants i professionals del sector. Pots seguir el seu treball al seu canal de YouTube <strong><a href="https://www.youtube.com/@programandootrahistoria" style="color: #d6006e;">Programant una altra Història</a></strong>.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">📅 Tallers de Robòtica: Els Més Demandats</h2>
 
-                    <div class="image-gallery">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/robotics-workshop.jpg" alt="Taller de robòtica" class="gallery-image">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/students-robots.jpg" alt="Estudiants amb robots" class="gallery-image">
-                    </div>
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2022/09/maqueen-microbit-rgb.jpg" alt="Taller de robòtica" class="content-image">
 
-                    <p class="content-text">Els <strong>tallers de robòtica</strong> s'han consolidat com l'activitat estrella del museu durant aquest període. Amb una demanda que supera totes les expectatives, aquests tallers combinen història de la computació amb tecnologia d'avantguarda, permetent als participants programar i construir els seus propis robots mentre aprenen sobre l'evolució de la intel·ligència artificial.</p>
+                    <p class="content-text">Els <strong>tallers de robòtica</strong> s'han consolidat com l'activitat estrella del museu durant aquest període. Amb una demanda que supera totes les expectatives, aquests tallers ensenyen als participants a programar i manejar robots utilitzant el llenguatge de programació visual Scratch per implementar un divertit joc de tipus Ping Pong, combinant aprenentatge i entreteniment de manera innovadora.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">🎯 Oracle4Girls: Inspirant les Tecnòlogues del Futur</h2>
                     
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2024/07/oracle4girls.jpg" alt="Esdeveniment Oracle4Girls" class="content-image">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Oracle4Girls-2949313138.jpg" alt="Esdeveniment Oracle4Girls" class="content-image">
 
                     <p class="content-text">El nostre museu va tenir l'honor de col·laborar en <strong>Oracle4Girls</strong>, un esdeveniment pioner que va apropar la tecnologia a xiquetes d'entre 4 i 15 anys. Durant aquesta jornada, els nostres voluntaris van impartir tallers especialitzats de robòtica, criptografia i programació en Scratch, sembrant les llavors de futures carreres STEM en les participants.</p>
 
@@ -421,6 +536,8 @@
 
                     <h2 class="section-title">🏛️ Dia Internacional dels Museus: Monkey Island a l'Àgora</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/atarist.jpg" alt="Atari ST al Dia Internacional dels Museus" class="content-image">
+
                     <p class="content-text">El 16 de maig vam celebrar el <strong>Dia Internacional dels Museus</strong> amb una participació especial a l'Àgora de la UPV. Junt amb altres museus universitaris, vam instal·lar un stand interactiu on l'estrella indiscutible va ser un <strong>Atari ST original</strong> executant el mític videojoc Monkey Island.</p>
 
                     <p class="content-text">Molts visitants van poder experimentar la màgia dels videojocs clàssics, mentre els nostres experts narraven l'evolució de la indústria de l'entreteniment digital. Va ser emocionant veure com diferents generacions s'unien al voltant d'aquesta obra mestra de LucasArts.</p>
@@ -428,6 +545,8 @@
                     <hr class="section-separator">
 
                     <h2 class="section-title">📈 Balanç 2025: Més de 50 Activitats Realitzades</h2>
+
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/activitats.jpg" alt="Activitats del museu" class="content-image">
 
                     <p class="content-text">Malgrat l'aturada inicial deguda a la DANA, hem recuperat completament el ritme i ja comptabilitzem <strong>més de 50 activitats</strong> dirigides a instituts i entitats col·laboradores. Aquestes inclouen visites guiades especialitzades, tallers temàtics i conferències magistrals.</p>
 
@@ -437,11 +556,15 @@
 
                     <h2 class="section-title">🚚 Nova Donació: Computadora Siemens Nixdorf</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/nixdorf.jpg" alt="Computadora Siemens Nixdorf" class="content-image">
+
                     <p class="content-text">En 2025 hem rebut multitud de donacions, totes elles molt apreciades pel nostre equip. Una de les últimes adquisicions ha sigut especialment notable: una rara <strong>computadora Siemens Nixdorf de 135 kg</strong> que l'equip del museu va traslladar des d'Alzira. Aquesta imponent màquina representa un testimoni únic de la informàtica empresarial alemanya dels anys 80 i 90.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">🔧 Restauració del VAX: Col·laboració Institucional</h2>
+
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/vax-scaled.jpg" alt="Restauració del VAX" class="content-image">
 
                     <p class="content-text">Gràcies a la col·laboració de l'<strong>Àrea del Fons d'Art i Patrimoni de la UPV</strong>, hem aconseguit restaurar completament una màquina mini-VAX. Aquesta joia de la computació de mitjans dels 80 ha sigut exposada a la segona planta de l'edifici DSIC (1F), on els visitants poden apreciar la seua impressionant arquitectura i entendre la seua importància en l'evolució dels sistemes informàtics.</p>
 
@@ -449,11 +572,19 @@
 
                     <h2 class="section-title">🗺️ Millores en la Senyalització del Museu</h2>
 
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/senaletica-scaled.jpg" alt="Nova senyalització del museu" class="content-image">
+
                     <p class="content-text">Hem completat la <strong>rotulació de les diferents entrades</strong> dels 4 edificis del museu (1G, 1E, 1F i 1B) amb mapes de situació i descripcions detallades de les seccions de l'exposició. Aquesta millora permetrà als nostres visitants orientar-se millor i recórrer amb major comoditat les diferents àrees temàtiques del museu.</p>
 
                     <hr class="section-separator">
 
                     <h2 class="section-title">📚 Ampliació de Fons Bibliogràfics</h2>
+
+                    <div class="image-gallery">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/historia.jpg" alt="Història dels llenguatges de programació" class="gallery-image-three">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/cincoduros.png" alt="Cinco Duros" class="gallery-image-three">
+                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Microhobby-218.png" alt="MicroHobby" class="gallery-image-three">
+                    </div>
 
                     <p class="content-text">La biblioteca del museu s'ha enriquit amb noves adquisicions especialitzades: <strong>dos volums sobre Història dels llenguatges de programació</strong> i <strong>dos exemplars de "Cinco Duros"</strong>. A més, hem sol·licitat la subscripció a la revista <strong>MicroHobby</strong>, que retorna aquest any després de dècades de pausa editorial.</p>
 
