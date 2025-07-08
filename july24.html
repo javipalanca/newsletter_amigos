@@ -2,45 +2,264 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amics del Museu - Newsletter</title>
   <style>
-    /* Responsive */
-    @media only screen and (max-width: 800px) {
+    /* Responsive Mobile First */
+    @media only screen and (max-width: 600px) {
       .container {
         width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
       }
-      .content {
-        padding: 10px !important;
+      
+      .main-table {
+        width: 100% !important;
+        min-width: 100% !important;
       }
+      
+      .content-cell {
+        padding: 15px !important;
+      }
+      
+      .header-cell {
+        padding: 15px !important;
+      }
+      
+      .title-cell {
+        padding: 15px !important;
+      }
+      
       .bilingual-column {
         width: 100% !important;
         display: block !important;
         padding-right: 0 !important;
         padding-left: 0 !important;
-        margin-bottom: 20px;
+        margin-bottom: 30px !important;
       }
+      
       .column-separator {
         display: none !important;
       }
+      
+      .column-left, .column-right {
+        padding: 0 !important;
+      }
+      
+      /* Header responsive */
+      .logo {
+        width: 100px !important;
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      
+      .logo-amigos {
+        height: 60px !important;
+        width: auto !important;
+        margin: 0 5px !important;
+        max-width: 45% !important;
+      }
+      
+      .logos-amigos-container {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      
+      /* Logos institucionales en móvil - mantener en fila pero más pequeños */
+      .header-cell table tr:last-child td {
+        width: 33.33% !important;
+        padding: 5px 2px !important;
+      }
+      
+      .header-cell table tr:last-child td .logo {
+        width: 80px !important;
+        height: auto !important;
+      }
+      
+      /* Typography responsive */
+      .main-title {
+        font-size: 1.4em !important;
+        line-height: 1.3 !important;
+        padding: 0 10px !important;
+      }
+      
+      .subtitle {
+        font-size: 0.85em !important;
+        line-height: 1.4 !important;
+        padding: 0 10px !important;
+      }
+      
+      .section-title {
+        font-size: 1.2em !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+      }
+      
+      .content-text {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+        margin-bottom: 12px !important;
+      }
+      
+      /* Media responsive */
+      .content-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 15px !important;
+      }
+      
+      .youtube-video {
+        width: 100% !important;
+        height: 200px !important;
+        max-width: 100% !important;
+      }
+      
+      /* Gallery responsive */
+      .image-gallery {
+        text-align: center !important;
+        margin: 15px 0 !important;
+      }
+      
+      .gallery-image {
+        width: 48% !important;
+        margin: 1% !important;
+      }
+      
+      .gallery-image-three {
+        width: 30% !important;
+        margin: 1.5% !important;
+      }
+      
+      /* Button responsive */
+      .cta-button {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box !important;
+        padding: 12px 20px !important;
+      }
+      
+      /* Table responsive */
+      .content-table-inner {
+        width: 100% !important;
+      }
+      
+      .activity-list {
+        padding-left: 15px !important;
+      }
+      
+      /* Links responsive */
+      a {
+        word-wrap: break-word !important;
+      }
+      
+      /* Footer responsive */
+      .footer-cell {
+        padding: 15px !important;
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+      }
+      
+      /* Enlaces y separadores para móvil */
+      .mobile-link-valenciano {
+        display: table-row !important;
+      }
+      
+      .mobile-separator-valenciano {
+        display: block !important;
+      }
+      
+      .column-separator {
+        display: none !important;
+      }
+    }
+    
+    /* Tablet responsive */
+    @media only screen and (min-width: 601px) and (max-width: 800px) {
+      .container {
+        width: 100% !important;
+        margin: 10px !important;
+      }
+      
+      .content-cell {
+        padding: 20px !important;
+      }
+      
+      .bilingual-column {
+        width: 100% !important;
+        display: block !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-bottom: 25px !important;
+      }
+      
+      .column-separator {
+        display: none !important;
+      }
+      
       .logo {
         width: 150px !important;
         height: auto !important;
       }
+      
       .logo-amigos {
         height: 100px !important;
         width: auto !important;
         margin: 0 10px !important;
       }
+      
       .logos-amigos-container {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         flex-wrap: nowrap !important;
-        white-space: nowrap !important;
       }
+      
       .youtube-video {
         width: 100% !important;
-        height: 200px !important;
+        height: 250px !important;
+      }
+      
+      .content-image {
+        max-width: 100% !important;
+      }
+      
+      /* Enlaces y separadores para tablet */
+      .mobile-link-valenciano {
+        display: table-row !important;
+      }
+      
+      .mobile-separator-valenciano {
+        display: block !important;
+      }
+      
+      .column-separator {
+        display: none !important;
+      }
+    }
+    
+    /* Base responsive settings for all screens */
+    @media only screen and (max-width: 800px) {
+      body {
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+      }
+      
+      table {
+        border-collapse: collapse !important;
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+      
+      img {
+        max-width: 100% !important;
+        height: auto !important;
       }
     }
     
@@ -254,13 +473,13 @@
                 </tr>
                 <!-- Segunda fila: Logos institucionales -->
                 <tr>
-                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2021/03/marca_UPV_principal_negro300.png" alt="Universitat Politècnica de València" class="logo">
                   </td>
-                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png" alt="Museu d'Informàtica" class="logo">
                   </td>
-                  <td style="text-align: center; vertical-align: middle; width: 33.33%;">
+                  <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2021/04/STINF_PRINCIPAL_V2-e1617005733397-300x295-1-e1619541346572.png" alt="ETSInf" class="logo">
                   </td>
                 </tr>
@@ -286,9 +505,9 @@
                   <td class="bilingual-column column-left">
                     <h2 class="section-title">✉️ Carta del Director</h2>
                     <p class="content-text">Queridos <strong>Amigos y Amigas del Museo</strong>,</p>
-                    <p class="content-text">Es para mí un gran placer daros la bienvenida a la <strong>primera edición del boletín del Museo de Informática</strong>. Con esta iniciativa queremos crear un canal de comunicación directo con vosotros, donde cada cuatro meses aproximadamente os contaremos las novedades más destacadas, curiosidades fascinantes y las actividades que desarrollamos en nuestro querido museo.</p>
-                    <p class="content-text">Como <strong>Amigos del Museo</strong>, sois parte fundamental de nuestra comunidad. Os recordamos que podéis pasar a vernos siempre que queráis: nuestras puertas están abiertas para vosotros. Vuestra pasión por la historia de la informática y vuestro apoyo constante nos motivan a seguir creciendo y mejorando cada día.</p>
-                    <p class="content-text">Queremos dar las gracias especialmente a todos los <strong>nuevos Amigos y Amigas</strong> que se han unido recientemente a nuestra comunidad. Vuestra incorporación nos llena de alegría y energía. Como muestra de nuestro agradecimiento, os recordamos que en el próximo <strong>Día del Amigo (fecha por determinar)</strong> se repartirán las recompensas especiales que tenemos preparadas para todos vosotros.</p>
+                    <p class="content-text">Es para mí un gran placer daros la bienvenida a la <strong>primera edición del boletín del Museo de Informática</strong>. Con esta iniciativa queremos crear un canal de comunicación directo con vosotros y vosotras, donde cada cuatro meses aproximadamente os contaremos las novedades más destacadas, curiosidades fascinantes y las actividades que desarrollamos en nuestro querido museo.</p>
+                    <p class="content-text">Como <strong>Amigos del Museo</strong>, sois parte fundamental de nuestra comunidad. Os recordamos que podéis pasar a vernos siempre que queráis: nuestras puertas están abiertas para vosotros y vosotras. Vuestra pasión por la historia de la informática y vuestro apoyo constante nos motivan a seguir creciendo y mejorando cada día.</p>
+                    <p class="content-text">Queremos dar las gracias especialmente a todos y todas los <strong>nuevos Amigos y Amigas</strong> que se han unido recientemente a nuestra comunidad. Vuestra incorporación nos llena de alegría y energía. Como muestra de nuestro agradecimiento, os recordamos que en el próximo <strong>Día del Amigo (fecha por determinar)</strong> se repartirán las recompensas especiales que tenemos preparadas para todos vosotros y vosotras.</p>
                     <p class="content-text">Espero que disfrutéis de esta primera entrega y que os sirva para conocer mejor todo lo que ocurre en vuestro museo.</p>
                     <p class="content-text">Un abrazo,<br><strong>Javi Palanca</strong><br><em>Director del Museo de Informática de la UPV</em></p>
                   </td>
@@ -300,7 +519,7 @@
                     <p class="content-text">Estimats <strong>Amics i Amigues del Museu</strong>,</p>
                     <p class="content-text">És per a mi un gran plaer donar-vos la benvinguda a la <strong>primera edició del butlletí del Museu d'Informàtica</strong>. Amb aquesta iniciativa volem crear un canal de comunicació directe amb vosaltres, on cada quatre mesos aproximadament us contarem les novetats més destacades, curiositats fascinants i les activitats que desenvolupem al nostre estimat museu.</p>
                     <p class="content-text">Com a <strong>Amics del Museu</strong>, sou part fonamental de la nostra comunitat. Us recordem que podeu passar a veure'ns sempre que vulgueu: les nostres portes estan obertes per a vosaltres. La vostra passió per la història de la informàtica i el vostre suport constant ens motiven a continuar creixent i millorant cada dia.</p>
-                    <p class="content-text">Volem donar les gràcies especialment a tots els <strong>nous Amics i Amigues</strong> que s'han unit recentment a la nostra comunitat. La vostra incorporació ens omple d'alegria i energia. Com a mostra del nostre agraïment, us recordem que en el pròxim <strong>Dia de l'Amic (data per determinar)</strong> es repartiran les recompenses especials que tenim preparades per a tots vosaltres.</p>
+                    <p class="content-text">Volem donar les gràcies especialment a tots i totes els <strong>nous Amics i Amigues</strong> que s'han unit recentment a la nostra comunitat. La vostra incorporació ens omple d'alegria i energia. Com a mostra del nostre agraïment, us recordem que en el pròxim <strong>Dia de l'Amic (data per determinar)</strong> es repartiran les recompenses especials que tenim preparades per a tots vosaltres.</p>
                     <p class="content-text">Espere que gaudiu d'aquesta primera entrega i que us servisca per conèixer millor tot el que ocorre al vostre museu.</p>
                     <p class="content-text">Una abraçada,<br><strong>Javi Palanca</strong><br><em>Director del Museu d'Informàtica de la UPV</em></p>
                   </td>
@@ -313,6 +532,15 @@
           <tr>
             <td style="padding: 0 30px;">
               <hr style="margin: 20px 0; border: 0; border-top: 2px solid #d6006e; width: 100%;">
+            </td>
+          </tr>
+
+          <!-- Enlace a versión valenciana (solo visible en móvil/tablet) -->
+          <tr class="mobile-link-valenciano" style="display: none;">
+            <td style="padding: 10px 30px; text-align: center; background-color: #f0f8ff;">
+              <p style="margin: 0; font-size: 12px; color: #666;">
+                <a href="#valenciano" style="color: #d6006e; text-decoration: none;">🔗 Ir a la versión en valenciano / Anar a la versió en valencià</a>
+              </p>
             </td>
           </tr>
 
@@ -341,7 +569,7 @@
 
                     <p class="content-text">El taller de reparaciones del museo ha sido escenario de auténticas resurrecciones tecnológicas. Hemos logrado devolver la vida a <strong>dos ordenadores Amiga 2000</strong>, cuya restauración supuso un verdadero desafío técnico: eliminar la corrosión causada por las baterías tras décadas de abandono, que había dañado las patillas del procesador Motorola 68000.</p>
 
-                    <p class="content-text">¿Quieres seguir nuestras reparaciones en directo? Puedes hacerlo a través de nuestro canal <strong><a href="https://twitch.tv/museuinfupv" style="color: #d6006e;">twitch.tv/museuinfupv</a></strong>, donde retransmitimos en vivo el proceso de restauración y puedes interactuar con nuestros voluntarios.</p>
+                    <p class="content-text">¿Quieres seguir nuestras reparaciones en directo? Puedes hacerlo a través de nuestro canal <strong><a href="https://twitch.tv/museuinfupv" style="color: #d6006e;">twitch.tv/museuinfupv</a></strong>, donde retransmitimos en vivo el proceso de restauración y puedes interactuar con nuestros voluntarios y voluntarias.</p>
 
                     <p class="content-text">Paralelamente, hemos recuperado un clásico <strong>Apple II</strong>, uno de los pioneros de la informática personal. Tras complejos problemas con su fuente de alimentación y con la inestimable colaboración de nuestro amigo José Luis Arenas (Arenas Electrochannel), este icono de la computación vuelve a funcionar como el primer día.</p>
 
@@ -382,7 +610,7 @@
 
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2022/09/maqueen-microbit-rgb.jpg" alt="Taller de robótica" class="content-image">
 
-                    <p class="content-text">Los <strong>talleres de robótica</strong> se han consolidado como la actividad estrella del museo durante este período. Con una demanda que supera todas las expectativas, estos talleres enseñan a los participantes a programar y manejar robots utilizando el lenguaje de programación visual Scratch para implementar un divertido juego de tipo Ping Pong, combinando aprendizaje y entretenimiento de manera innovadora.</p>
+                    <p class="content-text">Los <strong>talleres de robótica</strong> se han consolidado como la actividad estrella del museo durante este período. Con una demanda que supera todas las expectativas, estos talleres enseñan a los participantes y las participantes a programar y manejar robots utilizando el lenguaje de programación visual Scratch para implementar un divertido juego de tipo Ping Pong, combinando aprendizaje y entretenimiento de manera innovadora.</p>
 
                     <hr class="section-separator">
 
@@ -390,9 +618,9 @@
                     
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Oracle4Girls-2949313138.jpg" alt="Oracle4Girls evento" class="content-image">
 
-                    <p class="content-text">Nuestro museo tuvo el honor de colaborar en <strong>Oracle4Girls</strong>, un evento pionero que acercó la tecnología a niñas de entre 4 y 15 años. Durante esta jornada, nuestros voluntarios impartieron talleres especializados de robótica, criptografía y programación en Scratch, sembrando las semillas de futuras carreras STEM en las participantes.</p>
+                    <p class="content-text">Nuestro museo tuvo el honor de colaborar en <strong>Oracle4Girls</strong>, un evento pionero que acercó la tecnología a niñas de entre 4 y 15 años. Durante esta jornada, nuestros voluntarios y voluntarias impartieron talleres especializados de robótica, criptografía y programación en Scratch, sembrando las semillas de futuras carreras STEM en las participantes.</p>
 
-                    <p class="content-text">La respuesta fue extraordinaria: muchas niñas descubrieron que la tecnología no tiene género y que ellas pueden ser las protagonistas del futuro digital. Como Amigos del Museo, tenéis acceso prioritario a participar como voluntarios en próximas ediciones.</p>
+                    <p class="content-text">La respuesta fue extraordinaria: muchas niñas descubrieron que la tecnología no tiene género y que ellas pueden ser las protagonistas del futuro digital. Como Amigos y Amigas del Museo, tenéis acceso prioritario a participar como voluntarios y voluntarias en próximas ediciones.</p>
 
                     <hr class="section-separator">
 
@@ -402,7 +630,7 @@
 
                     <p class="content-text">El 16 de mayo celebramos el <strong>Día Internacional de los Museos</strong> con una participación especial en el Ágora de la UPV. Junto a otros museos universitarios, instalamos un stand interactivo donde la estrella indiscutible fue un <strong>Atari ST original</strong> ejecutando el mítico videojuego Monkey Island.</p>
 
-                    <p class="content-text">Muchos visitantes pudieron experimentar la magia de los videojuegos clásicos, mientras nuestros expertos narraban la evolución de la industria del entretenimiento digital. Fue emocionante ver cómo diferentes generaciones se unían alrededor de esta obra maestra de LucasArts.</p>
+                    <p class="content-text">Muchos visitantes pudieron experimentar la magia de los videojuegos clásicos, mientras nuestros expertos y expertas narraban la evolución de la industria del entretenimiento digital. Fue emocionante ver cómo diferentes generaciones se unían alrededor de esta obra maestra de LucasArts.</p>
 
                     <hr class="section-separator">
 
@@ -412,7 +640,7 @@
 
                     <p class="content-text">A pesar del parón inicial debido a la DANA, hemos recuperado completamente el ritmo y ya contabilizamos <strong>más de 50 actividades</strong> dirigidas a institutos y entidades colaboradoras. Estas incluyen visitas guiadas especializadas, talleres temáticos y conferencias magistrales.</p>
 
-                    <p class="content-text">Los datos son alentadores: cada semana recibimos nuevas solicitudes de centros educativos que desean que sus estudiantes descubran la fascinante historia de la informática. Como <strong>Amigo del Museo</strong>, recuerda que puedes recomendar nuestras actividades y disfrutar de acceso prioritario a todas ellas.</p>
+                    <p class="content-text">Los datos son alentadores: cada semana recibimos nuevas solicitudes de centros educativos que desean que sus estudiantes descubran la fascinante historia de la informática. Como <strong>Amigo o Amiga del Museo</strong>, recuerda que puedes recomendar nuestras actividades y disfrutar de acceso prioritario a todas ellas.</p>
 
                     <hr class="section-separator">
 
@@ -428,7 +656,11 @@
 
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/vax-scaled.jpg" alt="Restauración del VAX" class="content-image">
 
-                    <p class="content-text">Gracias a la colaboración del <strong>Área del Fondo de Arte y Patrimonio de la UPV</strong>, hemos logrado restaurar completamente una máquina mini-VAX. Esta joya de la computación de mediados de los 80 ha sido expuesta en la segunda planta del edificio DSIC (1F), donde los visitantes pueden apreciar su impresionante arquitectura y entender su importancia en la evolución de los sistemas informáticos.</p>
+                    <p class="content-text">Gracias a la colaboración del <strong>Área del Fondo de Arte y Patrimonio de la UPV</strong>, hemos logrado restaurar completamente una máquina de la familia VAX. Esta joya de la computación de los años 80 ha sido expuesta en la segunda planta del edificio DSIC (1F), donde los visitantes pueden apreciar su impresionante arquitectura y entender su importancia en la evolución de los sistemas informáticos.</p>
+
+                    <p class="content-text">La familia <strong>VAX</strong> de Digital Equipment Corporation (DEC) revolucionó la computación empresarial y académica desde finales de los años 70. Estas máquinas representaron el puente entre los grandes mainframes y las posteriores workstations, ofreciendo potencia de cálculo avanzada con una arquitectura innovadora que permitía el procesamiento multitarea y la gestión eficiente de memoria.</p>
+
+                    <p class="content-text"><strong>Contexto histórico:</strong> DEC fue una de las empresas más influyentes en la historia de la computación. Sus sistemas VAX dominaron el mercado de minicomputadoras durante más de una década, siendo especialmente populares en entornos académicos y de investigación. En España, estas máquinas fueron fundamentales en la informatización de universidades y centros del CSIC, marcando el inicio de la era de la computación distribuida en nuestro país.</p>
 
                     <hr class="section-separator">
 
@@ -462,6 +694,11 @@
                   
                   <!-- Columna Valenciano -->
                   <td class="bilingual-column column-right">
+                    <!-- Separador para versión valenciana (solo visible en móvil/tablet) -->
+                    <div class="mobile-separator-valenciano" style="display: none; padding: 20px 0; text-align: center; background-color: #f9f9f9; border-top: 3px solid #d6006e; border-bottom: 3px solid #d6006e; margin-bottom: 20px;">
+                      <h3 id="valenciano" style="color: #d6006e; margin: 0 0 10px 0; font-size: 1.2em;">📍 Versió en Valencià</h3>
+                    </div>
+                    
                     <h2 class="section-title">🏛️ Inauguració del Mainframe Cii Honeywell Bull</h2>
                     
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/PXL_20240902_105409957.jpg" alt="Inauguració Cii Honeywell Bull" class="content-image">
@@ -480,7 +717,7 @@
 
                     <p class="content-text">El taller de reparacions del museu ha sigut escenari d'autèntiques resurreccions tecnològiques. Hem aconseguit tornar la vida a <strong>dos ordinadors Amiga 2000</strong>, la restauració dels quals va suposar un veritable desafiament tècnic: eliminar la corrosió causada per les bateries després de dècades d'abandonament, que havia danyat les patilles del processador Motorola 68000.</p>
 
-                    <p class="content-text">Vols seguir les nostres reparacions en directe? Pots fer-ho a través del nostre canal <strong><a href="https://twitch.tv/museuinfupv" style="color: #d6006e;">twitch.tv/museuinfupv</a></strong>, on retransmetem en viu el procés de restauració i pots interactuar amb els nostres voluntaris.</p>
+                    <p class="content-text">Vols seguir les nostres reparacions en directe? Pots fer-ho a través del nostre canal <strong><a href="https://twitch.tv/museuinfupv" style="color: #d6006e;">twitch.tv/museuinfupv</a></strong>, on retransmetem en viu el procés de restauració i pots interactuar amb els nostres voluntaris i voluntàries.</p>
 
                     <p class="content-text">Paral·lelament, hem recuperat un clàssic <strong>Apple II</strong>, un dels pioners de la informàtica personal. Després de complexos problemes amb la seua font d'alimentació i amb la inestimable col·laboració del nostre amic José Luis Arenas (Arenas Electrochannel), aquesta icona de la computació torna a funcionar com el primer dia.</p>
 
@@ -520,7 +757,7 @@
 
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2022/09/maqueen-microbit-rgb.jpg" alt="Taller de robòtica" class="content-image">
 
-                    <p class="content-text">Els <strong>tallers de robòtica</strong> s'han consolidat com l'activitat estrella del museu durant aquest període. Amb una demanda que supera totes les expectatives, aquests tallers ensenyen als participants a programar i manejar robots utilitzant el llenguatge de programació visual Scratch per implementar un divertit joc de tipus Ping Pong, combinant aprenentatge i entreteniment de manera innovadora.</p>
+                    <p class="content-text">Els <strong>tallers de robòtica</strong> s'han consolidat com l'activitat estrella del museu durant aquest període. Amb una demanda que supera totes les expectatives, aquests tallers ensenyen als participants i a les participants a programar i manejar robots utilitzant el llenguatge de programació visual Scratch per implementar un divertit joc de tipus Ping Pong, combinant aprenentatge i entreteniment de manera innovadora.</p>
 
                     <hr class="section-separator">
 
@@ -528,9 +765,9 @@
                     
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/Oracle4Girls-2949313138.jpg" alt="Esdeveniment Oracle4Girls" class="content-image">
 
-                    <p class="content-text">El nostre museu va tenir l'honor de col·laborar en <strong>Oracle4Girls</strong>, un esdeveniment pioner que va apropar la tecnologia a xiquetes d'entre 4 i 15 anys. Durant aquesta jornada, els nostres voluntaris van impartir tallers especialitzats de robòtica, criptografia i programació en Scratch, sembrant les llavors de futures carreres STEM en les participants.</p>
+                    <p class="content-text">El nostre museu va tenir l'honor de col·laborar en <strong>Oracle4Girls</strong>, un esdeveniment pioner que va apropar la tecnologia a xiquetes d'entre 4 i 15 anys. Durant aquesta jornada, els nostres voluntaris i voluntàries van impartir tallers especialitzats de robòtica, criptografia i programació en Scratch, sembrant les llavors de futures carreres STEM en les participants.</p>
 
-                    <p class="content-text">La resposta va ser extraordinària: moltes xiquetes van descobrir que la tecnologia no té gènere i que elles poden ser les protagonistes del futur digital. Com a Amics del Museu, teniu accés prioritari per participar com a voluntaris en properes edicions.</p>
+                    <p class="content-text">La resposta va ser extraordinària: moltes xiquetes van descobrir que la tecnologia no té gènere i que elles poden ser les protagonistes del futur digital. Com a Amics i Amigues del Museu, teniu accés prioritari per participar com a voluntaris i voluntàries en properes edicions.</p>
 
                     <hr class="section-separator">
 
@@ -540,7 +777,7 @@
 
                     <p class="content-text">El 16 de maig vam celebrar el <strong>Dia Internacional dels Museus</strong> amb una participació especial a l'Àgora de la UPV. Junt amb altres museus universitaris, vam instal·lar un stand interactiu on l'estrella indiscutible va ser un <strong>Atari ST original</strong> executant el mític videojoc Monkey Island.</p>
 
-                    <p class="content-text">Molts visitants van poder experimentar la màgia dels videojocs clàssics, mentre els nostres experts narraven l'evolució de la indústria de l'entreteniment digital. Va ser emocionant veure com diferents generacions s'unien al voltant d'aquesta obra mestra de LucasArts.</p>
+                    <p class="content-text">Molts visitants van poder experimentar la màgia dels videojocs clàssics, mentre els nostres experts i expertes narraven l'evolució de la indústria de l'entreteniment digital. Va ser emocionant veure com diferents generacions s'unien al voltant d'aquesta obra mestra de LucasArts.</p>
 
                     <hr class="section-separator">
 
@@ -550,7 +787,7 @@
 
                     <p class="content-text">Malgrat l'aturada inicial deguda a la DANA, hem recuperat completament el ritme i ja comptabilitzem <strong>més de 50 activitats</strong> dirigides a instituts i entitats col·laboradores. Aquestes inclouen visites guiades especialitzades, tallers temàtics i conferències magistrals.</p>
 
-                    <p class="content-text">Les dades són encoratjadores: cada setmana rebem noves sol·licituds de centres educatius que desitgen que els seus estudiants descobreixin la fascinant història de la informàtica. Com a <strong>Amic del Museu</strong>, recorda que pots recomanar les nostres activitats i gaudir d'accés prioritari a totes elles.</p>
+                    <p class="content-text">Les dades són encoratjadores: cada setmana rebem noves sol·licituds de centres educatius que desitgen que els seus estudiants descobreixin la fascinant història de la informàtica. Com a <strong>Amic o Amiga del Museu</strong>, recorda que pots recomanar les nostres activitats i gaudir d'accés prioritari a totes elles.</p>
 
                     <hr class="section-separator">
 
@@ -566,7 +803,11 @@
 
                     <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/vax-scaled.jpg" alt="Restauració del VAX" class="content-image">
 
-                    <p class="content-text">Gràcies a la col·laboració de l'<strong>Àrea del Fons d'Art i Patrimoni de la UPV</strong>, hem aconseguit restaurar completament una màquina mini-VAX. Aquesta joia de la computació de mitjans dels 80 ha sigut exposada a la segona planta de l'edifici DSIC (1F), on els visitants poden apreciar la seua impressionant arquitectura i entendre la seua importància en l'evolució dels sistemes informàtics.</p>
+                    <p class="content-text">Gràcies a la col·laboració de l'<strong>Àrea del Fons d'Art i Patrimoni de la UPV</strong>, hem aconseguit restaurar completament una màquina de la família VAX. Aquesta joia de la computació dels anys 80 ha sigut exposada a la segona planta de l'edifici DSIC (1F), on els visitants poden apreciar la seua impressionant arquitectura i entendre la seua importància en l'evolució dels sistemes informàtics.</p>
+
+                    <p class="content-text">La família <strong>VAX</strong> de Digital Equipment Corporation (DEC) va revolucionar la computació empresarial i acadèmica des de finals dels anys 70. Aquestes màquines van representar el pont entre els grans mainframes i les posteriors workstations, oferint potència de càlcul avançada amb una arquitectura innovadora que permetia el processament multitasca i la gestió eficient de memòria.</p>
+
+                    <p class="content-text"><strong>Context històric:</strong> DEC va ser una de les empreses més influents en la història de la computació. Els seus sistemes VAX van dominar el mercat de minicomputadores durant més d'una dècada, sent especialment populars en entorns acadèmics i d'investigació. A Espanya, aquestes màquines van ser fonamentals en la informatització d'universitats i centres del CSIC, marcant l'inici de l'era de la computació distribuïda al nostre país.</p>
 
                     <hr class="section-separator">
 
