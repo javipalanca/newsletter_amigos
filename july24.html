@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
   <title>Amics del Museu - Newsletter</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
   <style>
     /* Responsive Mobile First */
     @media only screen and (max-width: 600px) {
       .container {
         width: 100% !important;
+        max-width: 100% !important;
         margin: 0 !important;
         border: none !important;
       }
@@ -54,18 +65,26 @@
       }
       
       .logo-amigos {
-        height: 60px !important;
+        /*height: 60px !important;*/
         width: auto !important;
         margin: 0 5px !important;
         max-width: 45% !important;
       }
       
       .logos-amigos-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-        gap: 10px !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+      
+      .logos-amigos-table {
+        margin: 0 auto !important;
+        border-collapse: collapse !important;
+      }
+      
+      .logos-amigos-table td {
+        text-align: center !important;
+        vertical-align: middle !important;
+        padding: 0 5px !important;
       }
       
       /* Logos institucionales en móvil - mantener en fila pero más pequeños */
@@ -184,7 +203,8 @@
     @media only screen and (min-width: 601px) and (max-width: 800px) {
       .container {
         width: 100% !important;
-        margin: 10px !important;
+        max-width: 95% !important;
+        margin: 10px auto !important;
       }
       
       .content-cell {
@@ -215,10 +235,19 @@
       }
       
       .logos-amigos-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: nowrap !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+      
+      .logos-amigos-table {
+        margin: 0 auto !important;
+        border-collapse: collapse !important;
+      }
+      
+      .logos-amigos-table td {
+        text-align: center !important;
+        vertical-align: middle !important;
+        padding: 0 10px !important;
       }
       
       .youtube-video {
@@ -265,8 +294,9 @@
     
     /* Layout */
     .container {
-      width: 1000px;
-      margin-top: 20px;
+      width: 80%;
+      /*max-width: 650px;*/
+      margin: 20px auto;
       border: 1px solid #ccc;
     }
     
@@ -286,16 +316,24 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
     }
     
     .main-table {
       width: 100%;
       background-color: #f4f4f4;
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
     }
     
     .content-table {
       background-color: #ffffff;
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
     }
     
     /* Header */
@@ -305,22 +343,30 @@
     }
     
     .logo {
-      width: 200px;
+      width: 150px;
       height: auto;
     }
     
     .logo-amigos {
-      height: 150px;
+      height: 120px;
       width: auto;
-      margin: 0 30px;
+      margin: 0 15px;
     }
     
     .logos-amigos-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      white-space: nowrap;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .logos-amigos-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    
+    .logos-amigos-table td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 0 15px;
     }
     
     /* Title section */
@@ -408,24 +454,33 @@
     /* Media elements */
     .content-image {
       width: 100%;
-      max-width: 350px;
+      max-width: 280px;
       height: auto;
       border-radius: 8px;
       margin-bottom: 15px;
+      display: block;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
     }
     
     .content-video {
       width: 100%;
-      max-width: 350px;
+      max-width: 280px;
       border-radius: 8px;
       margin-bottom: 15px;
+      display: block;
+      border: 0;
     }
     
     .youtube-video {
-      width: 350px;
-      height: 197px;
+      width: 280px;
+      height: 157px;
       border-radius: 8px;
       max-width: 100%;
+      border: 0;
+      display: block;
     }
     
     .image-gallery {
@@ -453,34 +508,42 @@
     }
   </style>
 </head>
-<body>
-  <table class="main-table" cellpadding="0" cellspacing="0" border="0">
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+  <table class="main-table" cellpadding="0" cellspacing="0" border="0" style="width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
     <tr>
-      <td align="center">
-        <table class="container content-table" cellpadding="0" cellspacing="0" border="0">
+      <td align="center" style="padding: 0;">
+        <table class="container content-table" cellpadding="0" cellspacing="0" border="0" style="width: 80%; background-color: #ffffff; border: 1px solid #ccc; margin: 20px auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
           <!-- Cabecera -->
           <tr>
-            <td class="header-cell">
-              <table style="width: 100%; border-collapse: collapse;">
+            <td class="header-cell" style="text-align: left; padding: 20px;">
+              <table style="width: 100%; border-collapse: collapse;" cellpadding="0" cellspacing="0" border="0">
                 <!-- Primera fila: Logos de Amigos del Museo -->
                 <tr>
                   <td colspan="3" style="text-align: center; vertical-align: middle; padding-bottom: 20px;">
                     <div class="logos-amigos-container">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amigos.png" alt="Amigos del Museo" class="logo-amigos">
-                      <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amics.png" alt="Amics del Museu" class="logo-amigos">
+                      <table class="logos-amigos-table" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto; border-collapse: collapse;">
+                        <tr>
+                          <td style="text-align: center; vertical-align: middle; padding: 0 15px; width: 45%;">
+                            <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amigos.png" alt="Amigos del Museo" class="logo-amigos" style="height: 120px; width: auto; display: block; margin: 0;">
+                          </td>
+                          <td style="text-align: center; vertical-align: middle; padding: 0 15px; width: 45%;">
+                            <img src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amics.png" alt="Amics del Museu" class="logo-amigos" style="height: 120px; width: auto; display: block; margin: 0;">
+                          </td>
+                        </tr>
+                      </table>
                     </div>
                   </td>
                 </tr>
                 <!-- Segunda fila: Logos institucionales -->
                 <tr>
                   <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/03/marca_UPV_principal_negro300.png" alt="Universitat Politècnica de València" class="logo">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/03/marca_UPV_principal_negro300.png" alt="Universitat Politècnica de València" class="logo" style="width: 150px; height: auto; display: block; margin: 0 auto;">
                   </td>
                   <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png" alt="Museu d'Informàtica" class="logo">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png" alt="Museu d'Informàtica" class="logo" style="width: 150px; height: auto; display: block; margin: 0 auto;">
                   </td>
                   <td style="text-align: center; vertical-align: middle; width: 33.33%; padding: 10px;">
-                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/04/STINF_PRINCIPAL_V2-e1617005733397-300x295-1-e1619541346572.png" alt="ETSInf" class="logo">
+                    <img src="https://museo.inf.upv.es/wp-content/uploads/2021/04/STINF_PRINCIPAL_V2-e1617005733397-300x295-1-e1619541346572.png" alt="ETSInf" class="logo" style="width: 150px; height: auto; display: block; margin: 0 auto;">
                   </td>
                 </tr>
               </table>
@@ -489,39 +552,39 @@
 
           <!-- Título -->
           <tr>
-            <td class="title-cell">
-              <h1 class="main-title">📰 Newsletter Amigos del Museo / Amics del Museu</h1>
-              <p class="subtitle">Número 1 • Julio 2025 • Núm. 1 • Juliol 2025</p>
-              <p class="subtitle">Todas las novedades, actividades y curiosidades del Museo de Informática de la UPV<br>
+            <td class="title-cell" style="text-align: center; padding: 10px 30px;">
+              <h1 class="main-title" style="color: #d6006e; margin: 0;">📰 Newsletter Amigos del Museo / Amics del Museu</h1>
+              <p class="subtitle" style="color: #555; margin: 10px 0 0 0;">Número 1 • Julio 2025 • Núm. 1 • Juliol 2025</p>
+              <p class="subtitle" style="color: #555; margin: 10px 0 0 0;">Todas las novedades, actividades y curiosidades del Museo de Informática de la UPV<br>
               Totes les novetats, activitats i curiositats del Museu d'Informàtica de la UPV</p>
             </td>
           </tr>
 
           <!-- Editorial del Director -->
           <tr>
-            <td class="content-cell">
-              <table class="content-table-inner" cellpadding="0" cellspacing="0" border="0">
+            <td class="content-cell" style="padding: 20px 30px;">
+              <table class="content-table-inner" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
                 <tr>
-                  <td class="bilingual-column column-left">
-                    <h2 class="section-title">✉️ Carta del Director</h2>
-                    <p class="content-text">Queridos <strong>Amigos y Amigas del Museo</strong>,</p>
-                    <p class="content-text">Es para mí un gran placer daros la bienvenida a la <strong>primera edición del boletín del Museo de Informática</strong>. Con esta iniciativa queremos crear un canal de comunicación directo con vosotros y vosotras, donde cada cuatro meses aproximadamente os contaremos las novedades más destacadas, curiosidades fascinantes y las actividades que desarrollamos en nuestro querido museo.</p>
-                    <p class="content-text">Como <strong>Amigos del Museo</strong>, sois parte fundamental de nuestra comunidad. Os recordamos que podéis pasar a vernos siempre que queráis: nuestras puertas están abiertas para vosotros y vosotras. Vuestra pasión por la historia de la informática y vuestro apoyo constante nos motivan a seguir creciendo y mejorando cada día.</p>
-                    <p class="content-text">Queremos dar las gracias especialmente a todos y todas los <strong>nuevos Amigos y Amigas</strong> que se han unido recientemente a nuestra comunidad. Vuestra incorporación nos llena de alegría y energía. Como muestra de nuestro agradecimiento, os recordamos que en el próximo <strong>Día del Amigo (fecha por determinar)</strong> se repartirán las recompensas especiales que tenemos preparadas para todos vosotros y vosotras.</p>
-                    <p class="content-text">Espero que disfrutéis de esta primera entrega y que os sirva para conocer mejor todo lo que ocurre en vuestro museo.</p>
-                    <p class="content-text">Un abrazo,<br><strong>Javi Palanca</strong><br><em>Director del Museo de Informática de la UPV</em></p>
+                  <td class="bilingual-column column-left" style="width: 48%; vertical-align: top; padding-right: 10px; color: #333; font-size: 16px; line-height: 1.6;">
+                    <h2 class="section-title" style="color: #d6006e; margin: 0 0 15px 0;">✉️ Carta del Director</h2>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Queridos <strong>Amigos y Amigas del Museo</strong>,</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Es para mí un gran placer daros la bienvenida a la <strong>primera edición del boletín del Museo de Informática</strong>. Con esta iniciativa queremos crear un canal de comunicación directo con vosotros y vosotras, donde cada cuatro meses aproximadamente os contaremos las novedades más destacadas, curiosidades fascinantes y las actividades que desarrollamos en nuestro querido museo.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Como <strong>Amigos del Museo</strong>, sois parte fundamental de nuestra comunidad. Os recordamos que podéis pasar a vernos siempre que queráis: nuestras puertas están abiertas para vosotros y vosotras. Vuestra pasión por la historia de la informática y vuestro apoyo constante nos motivan a seguir creciendo y mejorando cada día.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Queremos dar las gracias especialmente a todos y todas los <strong>nuevos Amigos y Amigas</strong> que se han unido recientemente a nuestra comunidad. Vuestra incorporación nos llena de alegría y energía. Como muestra de nuestro agradecimiento, os recordamos que en el próximo <strong>Día del Amigo (fecha por determinar)</strong> se repartirán las recompensas especiales que tenemos preparadas para todos vosotros y vosotras.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Espero que disfrutéis de esta primera entrega y que os sirva para conocer mejor todo lo que ocurre en vuestro museo.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Un abrazo,<br><strong>Javi Palanca</strong><br><em>Director del Museo de Informática de la UPV</em></p>
                   </td>
                   
-                  <td class="column-separator"></td>
+                  <td class="column-separator" style="width: 4%; vertical-align: top; border-left: 1px solid #eee;"></td>
                   
-                  <td class="bilingual-column column-right">
-                    <h2 class="section-title">✉️ Carta del Director</h2>
-                    <p class="content-text">Estimats <strong>Amics i Amigues del Museu</strong>,</p>
-                    <p class="content-text">És per a mi un gran plaer donar-vos la benvinguda a la <strong>primera edició del butlletí del Museu d'Informàtica</strong>. Amb aquesta iniciativa volem crear un canal de comunicació directe amb vosaltres, on cada quatre mesos aproximadament us contarem les novetats més destacades, curiositats fascinants i les activitats que desenvolupem al nostre estimat museu.</p>
-                    <p class="content-text">Com a <strong>Amics del Museu</strong>, sou part fonamental de la nostra comunitat. Us recordem que podeu passar a veure'ns sempre que vulgueu: les nostres portes estan obertes per a vosaltres. La vostra passió per la història de la informàtica i el vostre suport constant ens motiven a continuar creixent i millorant cada dia.</p>
-                    <p class="content-text">Volem donar les gràcies especialment a tots i totes els <strong>nous Amics i Amigues</strong> que s'han unit recentment a la nostra comunitat. La vostra incorporació ens omple d'alegria i energia. Com a mostra del nostre agraïment, us recordem que en el pròxim <strong>Dia de l'Amic (data per determinar)</strong> es repartiran les recompenses especials que tenim preparades per a tots vosaltres.</p>
-                    <p class="content-text">Espere que gaudiu d'aquesta primera entrega i que us servisca per conèixer millor tot el que ocorre al vostre museu.</p>
-                    <p class="content-text">Una abraçada,<br><strong>Javi Palanca</strong><br><em>Director del Museu d'Informàtica de la UPV</em></p>
+                  <td class="bilingual-column column-right" style="width: 48%; vertical-align: top; padding-left: 10px; color: #333; font-size: 16px; line-height: 1.6;">
+                    <h2 class="section-title" style="color: #d6006e; margin: 0 0 15px 0;">✉️ Carta del Director</h2>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Estimats <strong>Amics i Amigues del Museu</strong>,</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">És per a mi un gran plaer donar-vos la benvinguda a la <strong>primera edició del butlletí del Museu d'Informàtica</strong>. Amb aquesta iniciativa volem crear un canal de comunicació directe amb vosaltres, on cada quatre mesos aproximadament us contarem les novetats més destacades, curiositats fascinants i les activitats que desenvolupem al nostre estimat museu.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Com a <strong>Amics del Museu</strong>, sou part fonamental de la nostra comunitat. Us recordem que podeu passar a veure'ns sempre que vulgueu: les nostres portes estan obertes per a vosaltres. La vostra passió per la història de la informàtica i el vostre suport constant ens motiven a continuar creixent i millorant cada dia.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Volem donar les gràcies especialment a tots i totes els <strong>nous Amics i Amigues</strong> que s'han unit recentment a la nostra comunitat. La vostra incorporació ens omple d'alegria i energia. Com a mostra del nostre agraïment, us recordem que en el pròxim <strong>Dia de l'Amic (data per determinar)</strong> es repartiran les recompenses especials que tenim preparades per a tots vosaltres.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Espere que gaudiu d'aquesta primera entrega i que us servisca per conèixer millor tot el que ocorre al vostre museu.</p>
+                    <p class="content-text" style="margin: 0 0 15px 0; text-align: justify;">Una abraçada,<br><strong>Javi Palanca</strong><br><em>Director del Museu d'Informàtica de la UPV</em></p>
                   </td>
                 </tr>
               </table>
