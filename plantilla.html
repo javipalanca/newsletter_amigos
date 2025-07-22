@@ -224,7 +224,20 @@
 
         .gallery-image-three {
           width: 30% !important;
+          min-width: 100px !important;
+          max-width: 150px !important;
+          height: 160px !important;
+          object-fit: cover !important;
+          object-position: center !important;
           margin: 1.5% !important;
+          display: inline-block !important;
+          vertical-align: top !important;
+          border-radius: 6px !important;
+          box-sizing: border-box !important;
+        }
+
+        .gallery-image-three.contain {
+          object-fit: contain !important;
         }
 
         /* Button responsive */
@@ -566,8 +579,39 @@
 
       .gallery-image-three {
         width: 30%;
+        min-width: 120px;
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
         border-radius: 6px;
         margin: 0 1.5%;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+      }
+
+      /* Clase específica para imágenes que necesitan mostrase completas (libros, revistas) */
+      .gallery-image-three.contain {
+        object-fit: contain;
+      }
+
+      .image-gallery {
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      /* Soporte para flexbox donde esté disponible */
+      .image-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .image-gallery .gallery-image-three {
+        margin: 0;
       }
     </style>
   </head>
@@ -592,7 +636,6 @@
         border-radius: 5px;
       "
     >
-
       <table class="main-table">
         <thead>
           <tr>
@@ -726,7 +769,6 @@
       </table>
 
       {{ template "content" . }}
-      
     </div>
 
     <div
