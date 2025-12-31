@@ -1,3 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newsletter Amigos del Museo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <base target="_blank" />
+    <style>
+      body {
+        background-color: #f0f1f3;
+        font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 26px;
+        margin: 0;
+        color: #444;
+      }
+
+      pre {
+        background: #f4f4f4f4;
+        padding: 2px;
+      }
+
+      table {
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+      table td {
+        border-color: #ddd;
+        padding: 5px;
+      }
+
+      .wrap {
+        background-color: #fff;
+        padding: 30px;
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 5px;
+        min-height: 800px;
+        height: auto; /* Permite expansión */
+      }
+
+      .button {
+        background: #0055d4;
+        border-radius: 3px;
+        text-decoration: none !important;
+        color: #fff !important;
+        font-weight: bold;
+        padding: 10px 30px;
+        display: inline-block;
+      }
+      .button:hover {
+        background: #111;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #888;
+      }
+      .footer a {
+        color: #888;
+        margin-right: 5px;
+      }
+
+      .gutter {
+        padding: 30px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: #0055d4;
+      }
+      a:hover {
+        color: #111;
+      }
+      @media screen and (max-width: 600px) {
+        .wrap {
+          max-width: auto;
+        }
+        .gutter {
+          padding: 10px;
+        }
+      }
+
+      /* CSS de la plantilla */
+
+      .logo-amigos {
+        /*height: 60px !important;*/
+        width: auto !important;
+        margin: 0 auto !important;
+        height: auto;
+        max-height: 140px;
+      }
+
+      .logos-amigos-table {
+        margin: 0 auto !important;
+        border-collapse: collapse !important;
+        border: 0;
+      }
+
+      .logos-amigos-table td {
+        text-align: center !important;
+        vertical-align: middle !important;
+        padding: 0 5px !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          border: none !important;
+        }
+
+        .content-cell {
+          padding: 15px !important;
+        }
+
+        .header-cell {
+          padding: 15px !important;
+        }
+
+        .title-cell {
+          padding: 15px !important;
+        }
+
+        .bilingual-column {
+          width: 100% !important;
+          display: block !important;
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+          margin-bottom: 30px !important;
+        }
+
+        .column-separator {
+          display: none !important;
+        }
+
+        .column-left,
+        .column-right {
+          padding: 0 !important;
+        }
+
+        /* Header responsive */
+        .logo {
+          width: 100px !important;
+          height: auto !important;
+          max-width: 100% !important;
+        }
+
+        .logos-amigos-container {
+          text-align: center !important;
+          width: 100% !important;
+        }
+
+        /* Logos institucionales en móvil - mantener en fila pero más pequeños */
+        .header-cell table tr:last-child td {
+          width: 33.33% !important;
+          padding: 5px 2px !important;
+        }
+
+        .header-cell table tr:last-child td .logo {
+          width: 80px !important;
+          height: auto !important;
+        }
+
+        /* Typography responsive */
+        .main-title {
+          font-size: 1.4em !important;
+          line-height: 1.3 !important;
+          padding: 0 10px !important;
+        }
+
+        .subtitle {
+          font-size: 0.85em !important;
+          line-height: 1.4 !important;
+          padding: 0 10px !important;
+        }
+
+        .section-title {
+          font-size: 1.2em !important;
+          line-height: 1.3 !important;
+          margin-bottom: 10px !important;
+        }
+
+        .content-text {
+          font-size: 14px !important;
+          line-height: 1.6 !important;
+          text-align: left !important;
+          margin-bottom: 12px !important;
+        }
+
+        /* Media responsive */
+        .content-image {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-bottom: 15px !important;
+        }
+
+        .youtube-video {
+          width: 100% !important;
+          height: 200px !important;
+          max-width: 100% !important;
+        }
+
+        /* Gallery responsive */
+        .image-gallery {
+          text-align: center !important;
+          margin: 15px 0 !important;
+        }
+
+        .gallery-image {
+          width: 48% !important;
+          margin: 1% !important;
+        }
+
+        .gallery-image-three {
+          width: 30% !important;
+          min-width: 100px !important;
+          max-width: 150px !important;
+          height: 160px !important;
+          object-fit: cover !important;
+          object-position: center !important;
+          margin: 1.5% !important;
+          display: inline-block !important;
+          vertical-align: top !important;
+          border-radius: 6px !important;
+          box-sizing: border-box !important;
+        }
+
+        .gallery-image-three.contain {
+          object-fit: contain !important;
+        }
+
+        /* Button responsive */
+        .cta-button {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          margin: 10px 0 !important;
+          box-sizing: border-box !important;
+          padding: 12px 20px !important;
+        }
+
+        /* Table responsive */
+        .content-table-inner {
+          width: 100% !important;
+        }
+
+        .activity-list {
+          padding-left: 15px !important;
+        }
+
+        /* Links responsive */
+        a {
+          word-wrap: break-word !important;
+        }
+
+        /* Footer responsive */
+        .footer-cell {
+          padding: 15px !important;
+          font-size: 11px !important;
+          line-height: 1.4 !important;
+        }
+
+        /* Enlaces y separadores para móvil */
+        .mobile-link-valenciano {
+          display: table-row !important;
+        }
+
+        .mobile-separator-valenciano {
+          display: block !important;
+        }
+
+        .column-separator {
+          display: none !important;
+        }
+      }
+
+      /* Tablet responsive */
+      @media only screen and (min-width: 601px) and (max-width: 800px) {
+        .container {
+          width: 100% !important;
+          max-width: 95% !important;
+          margin: 10px auto !important;
+        }
+
+        .content-cell {
+          padding: 20px !important;
+        }
+
+        .bilingual-column {
+          width: 100% !important;
+          display: block !important;
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+          margin-bottom: 25px !important;
+        }
+
+        .column-separator {
+          display: none !important;
+        }
+
+        .logo {
+          width: 150px !important;
+          height: auto !important;
+        }
+
+        .logos-amigos-container {
+          text-align: center !important;
+          width: 100% !important;
+        }
+
+        .logos-amigos-table {
+          margin: 0 auto !important;
+          border-collapse: collapse !important;
+        }
+
+        .logos-amigos-table td {
+          text-align: center !important;
+          vertical-align: middle !important;
+          padding: 0 10px !important;
+        }
+
+        .youtube-video {
+          width: 100% !important;
+          height: 250px !important;
+        }
+
+        .content-image {
+          max-width: 100% !important;
+        }
+
+        /* Enlaces y separadores para tablet */
+        .mobile-link-valenciano {
+          display: table-row !important;
+        }
+
+        .mobile-separator-valenciano {
+          display: block !important;
+        }
+
+        .column-separator {
+          display: none !important;
+        }
+      }
+
+      /* Base responsive settings for all screens */
+      @media only screen and (max-width: 800px) {
+        body {
+          -webkit-text-size-adjust: 100% !important;
+          -ms-text-size-adjust: 100% !important;
+        }
+
+        table {
+          border-collapse: collapse !important;
+          mso-table-lspace: 0pt !important;
+          mso-table-rspace: 0pt !important;
+        }
+
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+
+      /* Layout */
+      .container {
+        width: 80%;
+        /*max-width: 650px;*/
+        margin: 20px auto;
+        border: 1px solid #ccc;
+      }
+
+      .bilingual-column {
+        width: 48%;
+        vertical-align: top;
+      }
+
+      .column-separator {
+        width: 4%;
+        vertical-align: top;
+        border-left: 1px solid #eee;
+      }
+
+      /* Body and containers */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      .main-table {
+        width: 100%;
+        background-color: #f4f4f4;
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        border: 0;
+      }
+
+      .content-table {
+        background-color: #ffffff;
+        border: 0;
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* Header */
+      .header-cell {
+        text-align: left;
+        padding: 20px;
+      }
+
+      .logo {
+        width: 150px;
+        height: auto;
+      }
+
+      .logos-amigos-container {
+        text-align: center;
+        width: 100%;
+      }
+
+      .logos-amigos-table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+
+      .logos-amigos-table td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 15px;
+      }
+
+      /* Title section */
+      .title-cell {
+        text-align: center;
+        padding: 10px 30px;
+      }
+
+      .main-title {
+        color: #d6006e;
+        margin: 0;
+      }
+
+      .subtitle {
+        color: #555;
+        margin: 10px 0 0 0;
+      }
+
+      /* Content */
+      .content-cell {
+        padding: 20px 30px;
+      }
+
+      .content-table-inner {
+        width: 100%;
+      }
+
+      .column-left {
+        padding-right: 10px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .column-right {
+        padding-left: 10px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .section-title {
+        color: #d6006e;
+        margin: 0 0 15px 0;
+      }
+
+      .content-text {
+        margin: 0 0 15px 0;
+        text-align: justify;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #d6006e;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .section-separator {
+        margin: 30px 0;
+        border: 0;
+        border-top: 1px solid #eee;
+      }
+
+      .activity-list {
+        padding-left: 20px;
+        margin: 0 0 15px 0;
+      }
+
+      /* Footer */
+      .footer-cell {
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 20px;
+        font-size: 12px;
+        color: #888;
+      }
+
+      .footer-link {
+        color: #888;
+      }
+
+      /* Media elements */
+      .content-image {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: block;
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      .content-video {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: block;
+        border: 0;
+      }
+
+      .youtube-video {
+        width: 280px;
+        height: 157px;
+        border-radius: 8px;
+        max-width: 100%;
+        border: 0;
+        display: block;
+      }
+
+      .image-gallery {
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      .gallery-image {
+        width: 45%;
+        border-radius: 6px;
+      }
+
+      .gallery-image:first-child {
+        margin-right: 2%;
+      }
+
+      .gallery-image:last-child {
+        margin-left: 2%;
+      }
+
+      .gallery-image-three {
+        width: 30%;
+        min-width: 120px;
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px;
+        margin: 0 1.5%;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+      }
+
+      /* Clase específica para imágenes que necesitan mostrase completas (libros, revistas) */
+      .gallery-image-three.contain {
+        object-fit: contain;
+      }
+
+      .image-gallery {
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      /* Soporte para flexbox donde esté disponible */
+      .image-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .image-gallery .gallery-image-three {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #f0f1f3;
+      font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 26px;
+      margin: 0;
+      color: #444;
+    "
+  >
+    <div class="gutter" style="padding: 30px">&nbsp;</div>
+    <div
+      class="wrap"
+      style="
+        background-color: #fff;
+        padding: 30px;
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 5px;
+      "
+    >
+      <table class="main-table">
+        <thead>
+          <tr>
+            <table
+              class="content-table"
+              style="width: 100%; border-collapse: collapse"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+            >
+              <!-- Primera fila: Logos de Amigos del Museo -->
+              <tr>
+                <td
+                  colspan="3"
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    padding-bottom: 20px;
+                  "
+                >
+                  <div class="logos-amigos-container">
+                    <table
+                      class="logos-amigos-table"
+                      cellpadding="0"
+                      cellspacing="0"
+                      border="0"
+                      style="margin: 0 auto; border-collapse: collapse"
+                    >
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            vertical-align: middle;
+                            padding: 0 15px;
+                            width: 45%;
+                            max-height: 62px;
+                          "
+                        >
+                          <img
+                            src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amigos.png"
+                            alt="Amigos del Museo"
+                            class="logo-amigos"
+                          />
+                        </td>
+                        <td
+                          style="
+                            text-align: center;
+                            vertical-align: middle;
+                            padding: 0 15px;
+                            width: 45%;
+                            max-height: 62px;
+                          "
+                        >
+                          <img
+                            src="https://museo.inf.upv.es/wp-content/uploads/2025/07/amics.png"
+                            alt="Amics del Museu"
+                            class="logo-amigos"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <!-- Segunda fila: Logos institucionales -->
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 33.33%;
+                    padding: 10px;
+                  "
+                >
+                  <img
+                    src="https://museo.inf.upv.es/wp-content/uploads/2021/03/marca_UPV_principal_negro300.png"
+                    alt="Universitat Politècnica de València"
+                    class="logo"
+                    style="
+                      width: 150px;
+                      height: auto;
+                      display: block;
+                      margin: 0 auto;
+                    "
+                  />
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 33.33%;
+                    padding: 10px;
+                  "
+                >
+                  <img
+                    src="https://museo.inf.upv.es/wp-content/uploads/2021/05/newlogoV.png"
+                    alt="Museu d'Informàtica"
+                    class="logo"
+                    style="
+                      width: 150px;
+                      height: auto;
+                      display: block;
+                      margin: 0 auto;
+                    "
+                  />
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 33.33%;
+                    padding: 10px;
+                  "
+                >
+                  <img
+                    src="https://museo.inf.upv.es/wp-content/uploads/2021/04/STINF_PRINCIPAL_V2-e1617005733397-300x295-1-e1619541346572.png"
+                    alt="ETSInf"
+                    class="logo"
+                    style="
+                      width: 150px;
+                      height: auto;
+                      display: block;
+                      margin: 0 auto;
+                    "
+                  />
+                </td>
+              </tr>
+            </table>
+          </tr>
+        </thead>
+      </table>
+
 <table class="main-table">
   <tr>
     <!-- Contenido principal -->
@@ -705,3 +1475,24 @@
     </td>
   </tr>
 </table>
+
+    </div>
+
+    <div
+      class="footer"
+      style="text-align: center; font-size: 12px; color: #888"
+    >
+      <p>
+        Esta es la newsletter dels Amics del Museu d’Informàtica. Fes-te amic
+        del museu a
+        <a href="https://mecenazgo.upv.es/amigosdelmuseo">Amics del Museu</a>.
+      </p>
+      <p>
+        Esta es la newsletter de los Amigos del Museo de Informática. Hazte
+        amigo del museo en
+        <a href="https://mecenazgo.upv.es/amigosdelmuseo">Amigos del Museo</a>.
+      </p>
+    </div>
+    <div class="gutter" style="padding: 30px">&nbsp;</div>
+  </body>
+</html>
